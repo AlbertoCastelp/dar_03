@@ -1,28 +1,21 @@
 // App.js
-import React, { useState } from 'react';
-import PublicComponent from './PublicComponent';
-import PrivateComponent from './PrivateComponent';
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
+import MainContent from './MainContent';
+import ContactForm from './ContactForm';
 
 const App = () => {
-  const [isLoggedIn, setLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    setLoggedIn(false);
-  };
-
   return (
     <div>
-      <h1>Aplicación Curiosa</h1>
-      <button onClick={handleLogin}>Iniciar Sesión</button>
-      <button onClick={handleLogout}>Cerrar Sesión</button>
-
-      <PublicComponent />
-
-      {isLoggedIn && <PrivateComponent />}
+      <Header />
+      <div className="container">
+        <Sidebar />
+        <MainContent />
+      </div>
+      <ContactForm />
+      <Footer />
     </div>
   );
 };
