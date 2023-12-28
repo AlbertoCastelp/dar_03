@@ -1,0 +1,117 @@
+/* src/App.css */
+.app-container {
+  flex: 1;
+  max-width: 100%x; /* Cambiado para ocupar todo el ancho */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  padding: 10px;
+  background-color: #3498db; /* Color de fondo del encabezado */
+  color: #ffffff; /* Color del texto del encabezado */
+}
+
+.navbar {
+  display: flex;
+  /*justify-content: space-around;*/
+  justify-content: center;
+  background-color: #2c3e50;
+  padding: 10px 0;
+}
+.navbar button {
+  margin: 0 10px;
+  background-color: #2ecc71; /* Color de fondo del botón del menú */
+  color: #ffffff; /* Color del texto del botón del menú */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.navbar button:hover {
+  background-color: #27ae60; /* Cambio de color al pasar el mouse */
+}
+
+.content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #34495e; /* Color de fondo del pie de página */
+  color: #ffffff; /* Color del texto del pie de página */
+  padding: 10px;
+  text-align: center;
+}
+.course-list-container {
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+  background-color: #ffffff; /* Color de fondo de la lista de cursos */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+.contact-form-container {
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button.course-button {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.course-button:hover {
+  background-color: #2980b9;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Color de fondo del cuerpo */
+}
+/* Estilo para el mensaje de bienvenida que ocupa toda la pantalla */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2; /* Gris suave */
+  color: #333333; /* Color del texto */
+ /* background-color: #3498db;
+  color: #ffffff;*/
+  text-align: center;
+}
+
+.welcome-container h1 {
+  font-size: 2em;
+}
