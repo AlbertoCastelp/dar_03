@@ -46,7 +46,7 @@
   background-color: #34495e; /* Color de fondo del pie de página */
   color: #ffffff; /* Color del texto del pie de página */
   padding: 10px;
-  text-align: center;
+  text-align: center; 
 }
 .course-list-container {
   padding: 20px;
