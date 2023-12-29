@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import CourseList from './components/CourseList';
 import CourseDetails from './components/CourseDetails';
 import WelcomeContent from './components/WelcomeContent';
+import ContactForm from './components/ContactForm';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Inicio');
@@ -36,6 +37,7 @@ const App = () => {
         {currentPage === 'Inicio' && <WelcomeContent />}
         {currentPage === 'Cursos' && <CourseList onCourseSelect={handleCourseSelect} />}
         {currentPage === 'Detalles del Curso' && <CourseDetails selectedCourse={selectedCourse} onEnroll={handleEnroll} />}
+	{currentPage === 'Contacto' && <ContactForm />}
       </main>
 
       <footer className="footer">
