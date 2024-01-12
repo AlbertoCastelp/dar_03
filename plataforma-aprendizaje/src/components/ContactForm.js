@@ -2,22 +2,27 @@
 import React, { useState } from 'react';
 
 const ContactForm = () => {
+  // Estado para gestionar los datos del formulario
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
 
+  // Manejador de cambios en los campos del formulario
   const handleChange = (e) => {
     const { name, value } = e.target;
+    // Actualiza el estado con los nuevos datos del formulario
     setFormData({
       ...formData,
       [name]: value
     });
   };
 
+  // Manejador de envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Muestra los datos del formulario en la consola (simulación de envío a un servidor)
     console.log('Datos del formulario:', formData);
   };
 
@@ -26,6 +31,7 @@ const ContactForm = () => {
       <h2>Contacto</h2>
       <p>¡Nos encantaría saber de ti! Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.</p>
 
+      {/* Formulario de contacto */}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Nombre:</label>

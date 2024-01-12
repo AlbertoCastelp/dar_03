@@ -1,11 +1,14 @@
 // src/components/EnrollmentForm.js
 import React, { useState } from 'react';
 
+// Componente funcional EnrollmentForm que representa un formulario de inscripción
 const EnrollmentForm = ({ onEnroll }) => {
+  // Estados para almacenar los datos del formulario
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
+  // Manejadores de cambio para actualizar los estados cuando se ingresan datos
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -18,6 +21,7 @@ const EnrollmentForm = ({ onEnroll }) => {
     setPhoneNumber(e.target.value);
   };
 
+  // Manejador para enviar el formulario al hacer clic en el botón "Inscribirse"
   const handleSubmit = () => {
     // Validar los datos si es necesario antes de llamar a onEnroll
     if (name.trim() === '' || email.trim() === '' || phoneNumber.trim() === '') {
@@ -34,6 +38,7 @@ const EnrollmentForm = ({ onEnroll }) => {
     setPhoneNumber('');
   };
 
+  // JSX que representa el formulario de inscripción
   return (
     <div>
       <label htmlFor="name">Nombre:</label>

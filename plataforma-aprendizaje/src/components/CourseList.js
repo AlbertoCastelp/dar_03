@@ -5,6 +5,7 @@ import reactImage from '../images/react.jpg';
 import pythonImage from '../images/919038_3ae1_11.jpg';
 
 const CourseList = ({ onCourseSelect }) => {
+  // Definición de cursos con sus detalles
   const courses = [
     { id: 1, title: 'Desarrollo Web', description: 'Aprende a desarrollar sitios web modernos. Este curso te enseñará las tecnologías más populares en el desarrollo web, incluyendo HTML, CSS y JavaScript.', image: desarrolloWebImage },
     { id: 2, title: 'React.js', description: 'Explora el mundo de React.js para construir aplicaciones interactivas. Este curso cubre los conceptos fundamentales de React y cómo construir componentes reutilizables.', image: reactImage },
@@ -17,9 +18,11 @@ const CourseList = ({ onCourseSelect }) => {
       <h2>Descubre Nuestros Cursos</h2>
       <p>Explora nuestra selección de cursos y elige el camino que más te apasiona. Desde desarrollo web hasta programación en Python, tenemos cursos para todos los niveles.</p>
       <ul className="course-list">
+        {/* Mapea sobre la lista de cursos y crea un elemento para cada uno */}
         {courses.map(course => (
           <li key={course.id} onClick={() => onCourseSelect(course)}>
             <div className="course-card">
+              {/* Imagen del curso con estilos para ajustar su tamaño */}
               <img
                 src={course.image}
                 alt={`Imagen de ${course.title}`}

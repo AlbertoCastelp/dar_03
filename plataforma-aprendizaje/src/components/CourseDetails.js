@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import EnrollmentForm from './EnrollmentForm';
 
 const CourseDetails = ({ selectedCourse, onEnroll }) => {
+  // Estado para controlar la visibilidad del formulario de inscripción
   const [showForm, setShowForm] = useState(false);
 
+  // Verifica si no hay un curso seleccionado
   if (!selectedCourse) {
     return (
       <div className="course-details-container">
@@ -13,8 +15,10 @@ const CourseDetails = ({ selectedCourse, onEnroll }) => {
     );
   }
 
+  // Obtiene datos del curso seleccionado
   const { title, description } = selectedCourse;
 
+  // Manejador para mostrar el formulario de inscripción al hacer clic en "Inscribirse"
   const handleEnrollClick = () => {
     setShowForm(true);
   };
@@ -32,6 +36,7 @@ const CourseDetails = ({ selectedCourse, onEnroll }) => {
         ¡No dudes en explorar el contenido del curso y participar activamente en las lecciones y ejercicios!
         Si estás listo para comenzar tu viaje de aprendizaje, simplemente haz clic en "Inscribirse" a continuación.
       </p>
+      {/* Renderiza el botón "Inscribirse" o el formulario de inscripción según el estado */}
       {!showForm ? (
         <button onClick={handleEnrollClick}>Inscribirse</button>
       ) : (
